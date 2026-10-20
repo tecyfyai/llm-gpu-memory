@@ -1,0 +1,35 @@
+{
+  "name": "llm-gpu-memory",
+  "version": "0.1.1",
+  "description": "How much GPU memory an open LLM needs to serve: weights and KV cache, how many of each GPU hold it, and the most tokens a second their memory allows.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "bin": {
+    "llm-gpu-memory": "bin/llm-gpu-memory.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecyfyai/llm-gpu-memory.git"
+  },
+  "homepage": "https://tecyfy.com/ai-agents/gpu-memory-calculator",
+  "bugs": "https://github.com/tecyfyai/llm-gpu-memory/issues",
+  "keywords": [
+    "llm",
+    "gpu",
+    "vram",
+    "kv-cache",
+    "inference",
+    "vllm",
+    "calculator",
+    "cli"
+  ],
+  "license": "MIT"
+}

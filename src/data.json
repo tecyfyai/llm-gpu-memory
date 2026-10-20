@@ -1,0 +1,714 @@
+{
+  "read": "2026-10-20",
+  "gpus": [
+    {
+      "id": "rtx-5090",
+      "name": "GeForce RTX 5090",
+      "maker": "NVIDIA",
+      "memory": 32,
+      "bandwidth": 1792,
+      "kind": "desktop",
+      "source": "https://www.nvidia.com/en-us/geforce/graphics-cards/compare/"
+    },
+    {
+      "id": "l4",
+      "name": "L4",
+      "maker": "NVIDIA",
+      "memory": 24,
+      "bandwidth": 300,
+      "kind": "data-center",
+      "source": "https://www.nvidia.com/en-us/data-center/l4/"
+    },
+    {
+      "id": "l40s",
+      "name": "L40S",
+      "maker": "NVIDIA",
+      "memory": 48,
+      "bandwidth": 864,
+      "kind": "data-center",
+      "source": "https://www.nvidia.com/en-us/data-center/l40s/"
+    },
+    {
+      "id": "rtx-pro-6000",
+      "name": "RTX PRO 6000 Blackwell",
+      "maker": "NVIDIA",
+      "memory": 96,
+      "bandwidth": 1792,
+      "kind": "workstation",
+      "source": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/"
+    },
+    {
+      "id": "dgx-spark",
+      "name": "DGX Spark",
+      "maker": "NVIDIA",
+      "memory": 128,
+      "bandwidth": 273,
+      "kind": "desktop",
+      "source": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+      "note": "Memory shared with its CPU"
+    },
+    {
+      "id": "a100",
+      "name": "A100 80GB",
+      "maker": "NVIDIA",
+      "memory": 80,
+      "bandwidth": 2039,
+      "kind": "data-center",
+      "source": "https://www.nvidia.com/en-us/data-center/a100/"
+    },
+    {
+      "id": "h100",
+      "name": "H100",
+      "maker": "NVIDIA",
+      "memory": 80,
+      "bandwidth": 3350,
+      "kind": "data-center",
+      "source": "https://www.nvidia.com/en-us/data-center/h100/"
+    },
+    {
+      "id": "h200",
+      "name": "H200",
+      "maker": "NVIDIA",
+      "memory": 141,
+      "bandwidth": 4800,
+      "kind": "data-center",
+      "source": "https://www.nvidia.com/en-us/data-center/h200/"
+    },
+    {
+      "id": "b200",
+      "name": "B200",
+      "maker": "NVIDIA",
+      "memory": 180,
+      "bandwidth": 8000,
+      "kind": "data-center",
+      "source": "https://www.nvidia.com/en-us/data-center/dgx-b200/",
+      "note": "1 of the 8 in a DGX B200"
+    },
+    {
+      "id": "mi300x",
+      "name": "Instinct MI300X",
+      "maker": "AMD",
+      "memory": 192,
+      "bandwidth": 5300,
+      "kind": "data-center",
+      "source": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"
+    },
+    {
+      "id": "mi325x",
+      "name": "Instinct MI325X",
+      "maker": "AMD",
+      "memory": 256,
+      "bandwidth": 6000,
+      "kind": "data-center",
+      "source": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html"
+    },
+    {
+      "id": "mi355x",
+      "name": "Instinct MI355X",
+      "maker": "AMD",
+      "memory": 288,
+      "bandwidth": 8000,
+      "kind": "data-center",
+      "source": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html"
+    }
+  ],
+  "models": [
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "maker": "Meta",
+      "repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "released": "2024-07-18",
+      "params": 8030261248,
+      "weights": 16060556376,
+      "format": "BF16",
+      "context": 131072,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 32,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 32
+    },
+    {
+      "id": "qwen3-5-9b",
+      "name": "Qwen3.5 9B",
+      "maker": "Qwen",
+      "repo": "Qwen/Qwen3.5-9B",
+      "released": "2026-02-27",
+      "params": 9653104368,
+      "weights": 19306310880,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 16,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 8,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 51511296,
+      "layers": 32
+    },
+    {
+      "id": "gemma-4-12b",
+      "name": "Gemma 4 12B",
+      "maker": "Google",
+      "repo": "google/gemma-4-12B-it",
+      "released": "2026-05-23",
+      "params": 11959730224,
+      "weights": 23919549408,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 16,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 8,
+          "values": 1024
+        },
+        {
+          "kind": "window",
+          "layers": 40,
+          "values": 4096,
+          "window": 1024
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 48
+    },
+    {
+      "id": "ministral-3-14b",
+      "name": "Ministral 3 14B",
+      "maker": "Mistral AI",
+      "repo": "mistralai/Ministral-3-14B-Instruct-2512",
+      "released": "2025-10-31",
+      "params": 13945032240,
+      "weights": 15726730568,
+      "format": "FP8",
+      "context": 262144,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 40,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 40
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "maker": "OpenAI",
+      "repo": "openai/gpt-oss-20b",
+      "released": "2025-08-04",
+      "params": 20914757184,
+      "active": 3600000000,
+      "weights": 13761316904,
+      "format": "MXFP4",
+      "context": 131072,
+      "heads": 64,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 12,
+          "values": 1024
+        },
+        {
+          "kind": "window",
+          "layers": 12,
+          "values": 1024,
+          "window": 128
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 24
+    },
+    {
+      "id": "mistral-small-3-2-24b",
+      "name": "Mistral Small 3.2 24B",
+      "maker": "Mistral AI",
+      "repo": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "released": "2025-06-19",
+      "params": 24011361280,
+      "weights": 48022800560,
+      "format": "BF16",
+      "context": 131072,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 40,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 40
+    },
+    {
+      "id": "devstral-small-2-24b",
+      "name": "Devstral Small 2 24B",
+      "maker": "Mistral AI",
+      "repo": "mistralai/Devstral-Small-2-24B-Instruct-2512",
+      "released": "2025-11-28",
+      "params": 24011361840,
+      "weights": 25793059408,
+      "format": "FP8",
+      "context": 393216,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 40,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 40
+    },
+    {
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "maker": "Google",
+      "repo": "google/gemma-4-26B-A4B-it",
+      "released": "2026-03-11",
+      "params": 25805936206,
+      "active": 4000000000,
+      "weights": 51612009916,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 16,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 5,
+          "values": 2048
+        },
+        {
+          "kind": "window",
+          "layers": 25,
+          "values": 4096,
+          "window": 1024
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 30
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "maker": "Qwen",
+      "repo": "Qwen/Qwen3.8-27B",
+      "released": "2026-08-05",
+      "params": 27781427952,
+      "weights": 55563006776,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 24,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 16,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 153944064,
+      "layers": 64
+    },
+    {
+      "id": "granite-4-2-30b",
+      "name": "Granite 4.2 30B",
+      "maker": "IBM",
+      "repo": "ibm-granite/granite-4.2-30b",
+      "released": "2026-08-07",
+      "params": 29276770304,
+      "weights": 58553607904,
+      "format": "BF16",
+      "context": 131072,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 64,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 64
+    },
+    {
+      "id": "nemotron-3-5-lightning-30b-a3b",
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "maker": "NVIDIA",
+      "repo": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "released": "2026-08-01",
+      "params": 31577937344,
+      "active": 3000000000,
+      "weights": 65827374264,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 6,
+          "values": 512
+        }
+      ],
+      "stateBytes": 49082368,
+      "layers": 29
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7-Flash",
+      "maker": "Z.ai",
+      "repo": "zai-org/GLM-4.7-Flash",
+      "released": "2026-01-19",
+      "params": 31221488576,
+      "active": 3000000000,
+      "weights": 62444175504,
+      "format": "BF16",
+      "context": 202752,
+      "heads": 20,
+      "groups": [
+        {
+          "kind": "latent",
+          "layers": 47,
+          "values": 576
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 47
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "maker": "Google",
+      "repo": "google/gemma-4-31B-it",
+      "released": "2026-03-11",
+      "params": 31273088876,
+      "weights": 62546338248,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 10,
+          "values": 4096
+        },
+        {
+          "kind": "window",
+          "layers": 50,
+          "values": 8192,
+          "window": 1024
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 60
+    },
+    {
+      "id": "qwen3-6-35b-a3b",
+      "name": "Qwen3.6 35B A3B",
+      "maker": "Qwen",
+      "repo": "Qwen/Qwen3.6-35B-A3B",
+      "released": "2026-04-15",
+      "params": 35951822704,
+      "active": 3000000000,
+      "weights": 71903776776,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 16,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 10,
+          "values": 1024
+        }
+      ],
+      "stateBytes": 64389120,
+      "layers": 40
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "maker": "Meta",
+      "repo": "meta-llama/Llama-3.3-70B-Instruct",
+      "released": "2024-11-26",
+      "params": 70553706496,
+      "weights": 141107497872,
+      "format": "BF16",
+      "context": 131072,
+      "heads": 64,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 80,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 80
+    },
+    {
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "maker": "Meta",
+      "repo": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "released": "2025-04-02",
+      "params": 108641793536,
+      "active": 17000000000,
+      "weights": 217283738720,
+      "format": "BF16",
+      "context": 10485760,
+      "heads": 40,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 12,
+          "values": 2048
+        },
+        {
+          "kind": "window",
+          "layers": 36,
+          "values": 2048,
+          "window": 8192
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 48
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "maker": "OpenAI",
+      "repo": "openai/gpt-oss-120b",
+      "released": "2025-08-04",
+      "params": 116829156672,
+      "active": 5100000000,
+      "weights": 65248893184,
+      "format": "MXFP4",
+      "context": 131072,
+      "heads": 64,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 18,
+          "values": 1024
+        },
+        {
+          "kind": "window",
+          "layers": 18,
+          "values": 1024,
+          "window": 128
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 36
+    },
+    {
+      "id": "mistral-small-4-119b",
+      "name": "Mistral Small 4 119B",
+      "maker": "Mistral AI",
+      "repo": "mistralai/Mistral-Small-4-119B-2603",
+      "released": "2026-01-23",
+      "params": 119401317952,
+      "active": 6500000000,
+      "weights": 120922973936,
+      "format": "FP8",
+      "context": 1048576,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "latent",
+          "layers": 36,
+          "values": 320
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 36
+    },
+    {
+      "id": "nemotron-3-super-120b-a12b",
+      "name": "Nemotron 3 Super 120B A12B",
+      "maker": "NVIDIA",
+      "repo": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "released": "2026-03-10",
+      "params": 123611012096,
+      "active": 12000000000,
+      "weights": 247227650480,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 8,
+          "values": 512
+        }
+      ],
+      "stateBytes": 170229760,
+      "layers": 48
+    },
+    {
+      "id": "qwen3-5-122b-a10b",
+      "name": "Qwen3.5 122B A10B",
+      "maker": "Qwen",
+      "repo": "Qwen/Qwen3.5-122B-A10B",
+      "released": "2026-02-24",
+      "params": 125086497008,
+      "active": 10000000000,
+      "weights": 250173250864,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 12,
+          "values": 1024
+        }
+      ],
+      "stateBytes": 153649152,
+      "layers": 48
+    },
+    {
+      "id": "mistral-medium-3-5-128b",
+      "name": "Mistral Medium 3.5 128B",
+      "maker": "Mistral AI",
+      "repo": "mistralai/Mistral-Medium-3.5-128B",
+      "released": "2026-03-31",
+      "params": 127704210176,
+      "weights": 133606164352,
+      "format": "FP8",
+      "context": 262144,
+      "heads": 96,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 88,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 88
+    },
+    {
+      "id": "qwen3-5-397b-a17b",
+      "name": "Qwen3.5 397B A17B",
+      "maker": "Qwen",
+      "repo": "Qwen/Qwen3.5-397B-A17B",
+      "released": "2026-02-16",
+      "params": 403397928944,
+      "active": 17000000000,
+      "weights": 806796241352,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 32,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 15,
+          "values": 1024
+        }
+      ],
+      "stateBytes": 192061440,
+      "layers": 60
+    },
+    {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "maker": "DeepSeek",
+      "repo": "deepseek-ai/DeepSeek-V3.2",
+      "released": "2025-12-01",
+      "params": 685355329792,
+      "active": 37000000000,
+      "weights": 689483049129,
+      "format": "FP8",
+      "context": 163840,
+      "heads": 128,
+      "groups": [
+        {
+          "kind": "latent",
+          "layers": 61,
+          "values": 704
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 61
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "maker": "Z.ai",
+      "repo": "zai-org/GLM-5.3",
+      "released": "2026-08-25",
+      "params": 753329940480,
+      "active": 40000000000,
+      "weights": 755632050320,
+      "format": "FP8",
+      "context": 1048576,
+      "heads": 64,
+      "groups": [
+        {
+          "kind": "latent",
+          "layers": 78,
+          "values": 704
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 78
+    },
+    {
+      "id": "kimi-k2-6",
+      "name": "Kimi K2.6",
+      "maker": "Moonshot AI",
+      "repo": "moonshotai/Kimi-K2.6",
+      "released": "2026-04-14",
+      "params": 1026879376368,
+      "active": 32000000000,
+      "weights": 595177988208,
+      "format": "INT4",
+      "context": 262144,
+      "heads": 64,
+      "groups": [
+        {
+          "kind": "latent",
+          "layers": 61,
+          "values": 576
+        }
+      ],
+      "stateBytes": 0,
+      "layers": 61
+    },
+    {
+      "id": "qwen3-8-2-4t-a95b",
+      "name": "Qwen3.8 2.4T A95B",
+      "maker": "Qwen",
+      "repo": "Qwen/Qwen3.8-2.4T-A95B",
+      "released": "2026-08-08",
+      "params": 2446182725504,
+      "active": 95000000000,
+      "weights": 4892365649336,
+      "format": "BF16",
+      "context": 262144,
+      "heads": 64,
+      "groups": [
+        {
+          "kind": "full",
+          "layers": 23,
+          "values": 2048
+        }
+      ],
+      "stateBytes": 587292672,
+      "layers": 92
+    }
+  ]
+}
